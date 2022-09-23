@@ -1,22 +1,14 @@
+import { API_END_POINT, SEND_PUSH_NOTIFICATION } from './constants';
 import { SendPushNotificationOptions, SendPushNotificationResult } from './types/push.types';
 import { JSONValue } from './types/types';
+import { isValideApiKey } from './utils/is-validate-apiKey';
 
 export default class Pushy {
-  static API_END_POINT = 'https://api.pushy.me';
 
   private apiKey: string;
 
-  /**
-   * Validate API Key
-   * @param apiKey Your Pushy API key
-   * @returns boolean
-   */
-  static isValideApiKey(apiKey: string) {
-    return apiKey.match(/^[0-9a-zA-Z]+$/) !== null;
-  }
-
   constructor(apiKey: string) {
-    if (!Pushy.isValideApiKey(apiKey)) {
+    if (!isValideApiKey(apiKey)) {
       throw new Error('Invalid API Key');
     }
 
@@ -38,7 +30,7 @@ export default class Pushy {
     recipient: string | string[],
     options?: Partial<SendPushNotificationOptions>,
   ): Promise<SendPushNotificationResult> {
-    const response = await fetch(`${Pushy.API_END_POINT}/push?api_key=${this.apiKey}`, {
+    const response = await fetch(`${API_END_POINT + SEND_PUSH_NOTIFICATION}?api_key=${this.apiKey}`, {
       method: 'POST',
       body: JSON.stringify({
         data,
