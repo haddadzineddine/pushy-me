@@ -4,7 +4,6 @@ import { JSONValue } from './types/types';
 import { isValideApiKey } from './utils/is-valide-apiKey';
 
 export default class Pushy {
-
   private apiKey: string;
 
   constructor(apiKey: string) {
