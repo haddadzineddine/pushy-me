@@ -1,7 +1,7 @@
 import { API_END_POINT, SEND_PUSH_NOTIFICATION } from './constants';
 import { SendPushNotificationOptions, SendPushNotificationResult } from './types/push.types';
 import { JSONValue } from './types/types';
-import { isValideApiKey } from './utils/is-validate-apiKey';
+import { isValideApiKey } from './utils/is-valide-apiKey';
 
 export default class Pushy {
 
