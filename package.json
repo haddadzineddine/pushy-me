@@ -1,0 +1,35 @@
+{
+  "name": "pushy-me",
+  "version": "1.0.0",
+  "description": "An Azure Storage module for Node js",
+  "license": "MIT",
+  "author": "Haddad Zineddine",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "tsc"
+  },
+  "keywords": [
+    "pushy",
+    "notification"
+  ],
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haddadzineddine/pushy-me"
+  },
+  "homepage": "https://github.com/haddadzineddine/pushy-me#readme",
+  "bugs": {
+    "url": "https://github.com/haddadzineddine/pushy-me/issues",
+    "email": "hz_haddad@esi.dz"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
+}
