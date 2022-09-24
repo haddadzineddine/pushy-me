@@ -1,6 +1,6 @@
 {
   "name": "pushy-me",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pushy-me is a simple push notification service for Node.js",
   "license": "MIT",
   "author": "Haddad Zineddine",
