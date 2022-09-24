@@ -9,7 +9,7 @@ export default class PushyMe {
     this.pushyMeInterface.setApiKey(apiKey);
   }
 
-  static create(apiKey: string): PushyMe {
+  static initialize(apiKey: string): PushyMe {
     const value = new ApiKey(apiKey);
     return new PushyMe(new PushyMeService(), value.get());
   }
