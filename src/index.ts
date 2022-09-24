@@ -12,7 +12,8 @@ export default class Pushy {
   }
 
   static create(apiKey: string): Pushy {
-    return new Pushy(new PushyMeService(), apiKey);
+    const value = new ApiKey(apiKey);
+    return new Pushy(new PushyMeService(), value.get());
   }
 
   async sendPushNotification(
