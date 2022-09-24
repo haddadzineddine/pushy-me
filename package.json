@@ -1,12 +1,13 @@
 {
   "name": "pushy-me",
   "version": "1.0.0",
-  "description": "An Azure Storage module for Node js",
+  "description": "pushy-me is a simple push notification service for Node.js",
   "license": "MIT",
   "author": "Haddad Zineddine",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "build": "tsc",
     "test": "jest"
   },

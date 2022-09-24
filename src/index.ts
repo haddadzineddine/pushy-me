@@ -4,9 +4,7 @@ import { JSONValue } from './types';
 import { SendPushNotificationOptions, SendPushNotificationResult } from './types/push.types';
 import { PushyMeInterface } from './interfaces/pushy-me.interface';
 
-
 export default class Pushy {
-
   constructor(private readonly pushyMeInterface: PushyMeInterface, private readonly apiKey: string) {
     this.pushyMeInterface.setApiKey(apiKey);
   }
@@ -24,9 +22,3 @@ export default class Pushy {
     return this.pushyMeInterface.sendPushNotification(data, recipient, options);
   }
 }
-
-
-
-
-
-
