@@ -27,13 +27,13 @@ export class PushyMeService implements PushyMeInterface {
       headers: { 'Content-Type': 'application/json' },
     });
 
-    const result = await response.json();
+    const result = (await response.json()) as SendPushNotificationResult;
 
-    if (result.status !== 200) {
+    if (result.success === false) {
       throw new Error('An invalid response code was received from the Pushy API.');
     }
 
-    return result as SendPushNotificationResult;
+    return result;
   }
 
   private apiKeyIsSet(): void {
