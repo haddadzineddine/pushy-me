@@ -1,6 +1,6 @@
 {
   "name": "pushy-me",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "pushy-me is a simple push notification service for Node.js",
   "license": "MIT",
   "author": "Haddad Zineddine",
@@ -36,6 +36,7 @@
     "email": "hz_haddad@esi.dz"
   },
   "dependencies": {
-    "node-fetch": "^3.2.10"
+    "@types/node-fetch": "^2.6.2",
+    "node-fetch": "^2.6.7"
   }
 }

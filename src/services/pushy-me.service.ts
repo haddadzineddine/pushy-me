@@ -2,10 +2,8 @@ import { API_END_POINT, SEND_PUSH_NOTIFICATION } from '../constants';
 import { PushyMeInterface } from '../interfaces/pushy-me.interface';
 import { JSONValue } from '../types';
 import { SendPushNotificationOptions, SendPushNotificationResult } from '../types/push.types';
-import { RequestInfo, RequestInit } from 'node-fetch';
+import fetch from 'node-fetch';
 
-
-const fetch = (url: RequestInfo, init?: RequestInit) => import('node-fetch').then(module => module.default(url, init));
 
 export class PushyMeService implements PushyMeInterface {
   private apiKey?: string;
