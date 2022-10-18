@@ -2,6 +2,7 @@ import { API_END_POINT, SEND_PUSH_NOTIFICATION } from '../constants';
 import { PushyMeInterface } from '../interfaces/pushy-me.interface';
 import { JSONValue } from '../types';
 import { SendPushNotificationOptions, SendPushNotificationResult } from '../types/push.types';
+import fetch from 'node-fetch';
 
 export class PushyMeService implements PushyMeInterface {
   private apiKey?: string;
